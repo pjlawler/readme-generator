@@ -10,7 +10,7 @@
 
  _ _ _
  ## *Description*
- ### This is my week 9 Node.js challenge submission. The task was to create a command-line application that dynamically generates a professionad README.md file from a user's input utilizing the Inquirer npm package.  
+ ### This is my week 9 Node.js challenge submission. The task was to create a command-line application that dynamically generates a professional README.md file from a user's input utilizing the Inquirer npm package.  
 
  [GitHub Repository](https://github.com/pjlawler/readme-generator)
  
@@ -21,7 +21,9 @@
  ## *Usage Information*
   All you need to do is run 'node index' from the app's local directory, then answer the questions presented on command line and the app will do the rest! Please see the above walk-through video in the description section of this README file for a more detailed demonstration of its functionality.
 
-  The easiest way to include a screen shot of your project in your generated README is to place the screen shot png image in the /src folder and name it screen-shot.png; which is the default name and location for the screenshot set in the app. If you do include a screen-shot in the generted readme, the file location will have to be updated to reflect the location of that file in your particular project.
+  Adding a screenshot makes your README much more professional, but does add a little complexity to the process. If you do opt to include a screenshot of your project, the easiest way is to place the png image in the /src folder and name it 'screen-shot.png'; which is the default name and location for the screenshot in the app. You are able to use any location and filename for your screen shot, however, you will have to type it exactly for the app to locate that image on your system and include it in the final product.
+  
+  ***Please note*** - if you do want a screenshot to be included in your README.md file, the image you are using will have to be copied to your project along with the readme file.  Also, the url of that image in your project will have to be manually updated in your README file to reflect its location of your particular project. For example, if you have it in a './assets/imgs' folder for your project, you will need the readme to reflect the image's relative url to that location.
   - - -
  ## *Installation Instructions*
   Download or clone the directory from its GitHub repository.
