@@ -20,7 +20,10 @@ const mockData = {
   author: 'Patrick J. Lawler',
   github: 'pjlawler',
   email: 'patlaw777@icloud.com',
-  license: 'none',
+  tests: 'There is no testing for this project, it was created by Pat who does not make mistakes.',
+  usage: 'Use to get your travel data',
+  installation: 'No installation required, just go to the websit',
+  license: 'mit',
   screenshot: '../assets/imgs/screen-shot.png',
   hasCollaborators: true,
   collaborators: [
@@ -40,6 +43,10 @@ const mockData = {
 };
 
 function init() {  
+  const data = generateMarkdown(mockData);
+  writeFile(data);
+  return false;
+
   getProjectInfo()
   .then(addCollaborators)
   .then(generateMarkdown)
@@ -99,14 +106,14 @@ const getProjectInfo = () => {
   },
   {
     type: 'input',
-    name: 'credits',
-    message: 'Please provide additional credits, if any:'
+    name: 'tests',
+    message: 'Please provide testing information, if any:'
   },
   {
     type: 'rawlist',
     name: 'license',
     message: 'Which license would you like to use?',
-    choices: ['None','MIT', 'GPlv2', 'Apache', 'GPLv3', 'BSD 3-clause', 'BSD 2-clause', 'LGHPLv3', 'AGPLv3', 'Custom'],
+    choices: ['None','MIT', 'GPlv2', 'Apache', 'GPLv3', 'BSD 3-clause', 'BSD 2-clause', 'Custom'],
     default: 1,
     filter(val) { return val.toLowerCase(); }
   },
@@ -120,11 +127,10 @@ const getProjectInfo = () => {
   {
     type: 'confirm',
     name: 'hasCollaborators',
-    message: 'Did you have any collaborators for this project?',
+    message: 'Did you have any collaborators contributing to this project?',
     default: false
   }
-  ])
-  .then(() => { return mockData; });
+  ]);
 };
 // Adds an array of collaborators if there were any
 const addCollaborators = (projectInfo)  => {
