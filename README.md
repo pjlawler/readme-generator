@@ -24,7 +24,7 @@
   The easiest way to include a screen shot of your project in your generated README is to place the screen shot png image in the /src folder and name it screen-shot.png; which is the default name and location for the screenshot set in the app. If you do include a screen-shot in the generted readme, the file location will have to be updated to reflect the location of that file in your particular project.
   - - -
  ## *Installation Instructions*
-  Download or clone the directory from the its GitHub repository.
+  Download or clone the directory from its GitHub repository.
   - - -
  ## *Tests*
   No testing is currently being conducted.
