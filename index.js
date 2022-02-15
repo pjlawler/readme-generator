@@ -14,39 +14,8 @@ function validateAnswer(value, type, message) {
       }
   }
 }
-const mockData = {
-  title: 'Destination Briefing',
-  description: 'A one-stop shop that allows you to get all of your destinations travel information, including time-difference, weather, average temps, currency, language info, electrical and health information.',
-  author: 'Patrick J. Lawler',
-  github: 'pjlawler',
-  email: 'patlaw777@icloud.com',
-  tests: 'There is no testing for this project, it was created by Pat who does not make mistakes.',
-  usage: 'Use to get your travel data',
-  installation: 'No installation required, just go to the websit',
-  license: 'mit',
-  screenshot: '../assets/imgs/screen-shot.png',
-  hasCollaborators: true,
-  collaborators: [
-    {
-      name: 'Paul G',
-      github: 'paulg'
-    },
-    {
-      name: 'Dan P',
-      github: 'danp'
-    },
-    {
-      name: 'Larry S',
-      github: 'larrys'
-    }
-  ]
-};
 
 function init() {  
-  const data = generateMarkdown(mockData);
-  writeFile(data);
-  return false;
-
   getProjectInfo()
   .then(addCollaborators)
   .then(generateMarkdown)
@@ -132,7 +101,7 @@ const getProjectInfo = () => {
   }
   ]);
 };
-// Adds an array of collaborators if there were any
+// Adds an array of contributing collaborators if there were any
 const addCollaborators = (projectInfo)  => {
 
    if (!projectInfo.hasCollaborators) { return projectInfo; }
@@ -166,7 +135,6 @@ const addCollaborators = (projectInfo)  => {
     ])
     .then(collaboratorData => {
        projectInfo.collaborators.push(collaboratorData);
-        
        if(collaboratorData.confirmAddAnother) { return addCollaborators(projectInfo) }
        else { return projectInfo }
     });

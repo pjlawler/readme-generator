@@ -34,20 +34,18 @@ function renderTableOfContents(data) {
     toc += `${index + 1 }. [${item}](${link_url(item)})
 `});
   return toc;
-}
+};
 
 // These render the sections if there's data present, if not, the function will return an empty string so it doesn't render anything undefined 
 function renderScreenShot(imgUrl) {
   if (imgUrl === 'none') { return ''; }
   return `![Screen Shot](${imgUrl})`
-}
+};
 function renderContributing (data) {
   // will return the additonal collaborators that were entered from the cli, if any
   if(!data.hasCollaborators) {return ""}
-    
   let line = `## *Contributing*
   `
-  
   // constructs the string to hold the list of collaborators and their github addresses
   data.collaborators.forEach(col => { 
     line += `- ${col.name} [github](https://github.com/${col.github})
@@ -55,28 +53,28 @@ function renderContributing (data) {
   });
   line += `- - -`
   return line;
-}
+};
 function renderTests(tests) {
   // returns the additional credits entered from the cli, if any
   if(!tests) {return ""}
   return `## *Tests*
   ${tests}
   - - -`
-}
+};
 function renderInstallation(installation) {
   // returns the installation instructions that was entered in the cli, if any exists
   if(!installation) {return ""}
   return `## *Installation Instructions*
   ${installation}
   - - -`
-}
+};
 function renderUsage(usage) {
   // returns the usage instructions text that was entered from the cli, if there is any
   if(!usage) {return ""}
   return `## *Usage Information*
   ${usage}
   - - -`
-}
+};
 function renderLicenseBadge(license) {
     switch(license) {
       case 'mit': return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
@@ -205,7 +203,7 @@ function renderLicenseSection(data) {
 // constructs the string for the license to be displayed in the readme string
   return `## *License Info*
   ${renderLicenseBadge(data.license)}  ${text()}`
-}
+};
 
 // constructs the final markdown string to be used when writing the README.md file
 function generateMarkdown(data) { 
@@ -223,7 +221,7 @@ function generateMarkdown(data) {
  ${renderTests(data.tests)}
  ${renderContributing(data)}
  ## *Questions*
- ###   For questions or comments concerning this project please contact, ${data.author}, the author, owner and manager this project via either github or email. Links for each are listed below.
+ ###   For questions or comments concerning this project please contact, ${data.author}, the author, owner and manager the work via either github or email. Links for each are listed below.
  - [github](https://github.com/${data.github}) ${data.github}
  - ${data.email}
  _ _ _
