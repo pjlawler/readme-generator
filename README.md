@@ -1,4 +1,3 @@
-
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
  # readme-generator
  ## *Table of Contents*
@@ -11,21 +10,27 @@
 
  _ _ _
  ## *Description*
- ### This is my week 9 challenge. Create a node.js app that will create a high quality readme file from the command line. 
+ ### This is my week 9 Node.js challenge submission. The task was to create a command-line application that dynamically generates a professionad README.md file from a user's input utilizing the Inquirer npm package.  
+
+ [GitHub Repository](https://github.com/pjlawler/readme-generator)
+ 
+ [Walk Through Video](https://watch.screencastify.com/v/NZJszpz2PVNLwlEF2GW8)
 
  _ _ _
  ## *Usage Information*
-  All you need to do is answer the questions on the command line and the app will do the rest!
+  All you need to do is 'run node' index from the app's local directory, then answer the questions presented on command line and the app will do the rest! Please see the above walk-through video in the description section of this README file for a more detailed demonstration of its functionality.
+
+  The easiest way to include a screen shot of your project in your generated README is to place the screen shot png image in the /src folder and name it screen-shot.png; which is the default name and location for the screenshot set in the app.
   - - -
  ## *Installation Instructions*
-  None
+  Download or clone the directory from the its GitHub repository.
   - - -
  ## *Tests*
-  None
+  No testing is currently being conducted.
   - - -
  
  ## *Questions*
- ###   For questions or comments concerning this project please contact, Patrick Lawler, the author, owner and manager the work via either github or email. Links for each are listed below.
+ ###   All questions or comments concerning this project should be directed to Patrick Lawler, the author, owner and manager of this work via either github or email. Links for each are listed below.
  - [github](https://github.com/pjlawler) pjlawler
  - patlaw777@icloud.com
  _ _ _

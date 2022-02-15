@@ -60,7 +60,7 @@ const getProjectInfo = () => {
     type: 'input',
     name: 'screenshot',
     message: 'Please enter the location of the screen-shot file (type none if there is no screenshot)',
-    default: '../assets/imgs/screen-shot.png',
+    default: '../src/screen-shot.png',
     filter(val) { return val.toLowerCase(); }
   },
   {

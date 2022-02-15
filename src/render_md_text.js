@@ -38,7 +38,7 @@ function renderTableOfContents(data) {
 
 // These render the sections if there's data present, if not, the function will return an empty string so it doesn't render anything undefined 
 function renderScreenShot(imgUrl) {
-  if (imgUrl === 'none') { return ''; }
+  if (!imgUrl || imgUrl === 'none') { return ''; }
   return `![Screen Shot](${imgUrl})`
 };
 function renderContributing (data) {
